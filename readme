@@ -1,0 +1,8 @@
+//create a new file command
+
+//node api.js add orange 'this is a fruit and color'
+
+
+// add : add new File
+// orange : filename
+// 'this is a fruit and color' is a text in file
