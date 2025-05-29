@@ -25,14 +25,30 @@ const express = require('express');
 const app = express();
 
 app.get('', (req, resp) => {
-    resp.send('Hello this is a home page');
+    resp.send(`<h1>Hello this is a home page</h1>
+        <a href="/about">Go to about page</a>
+        `);
 });
 
+
+// http://localhost:5600/about?name=Bhavna
+
 app.get('/about', (req, resp) => {
-    resp.send('Hello this is a about us page');
+    resp.send(`<h1>Hello this is a about us page</h1>
+        <input type="text" placeholder="User Name" value="${req.query.name}"/>
+        <a href="/help">Go to help page</a><br>
+        <a href="/">Go to home page</a>
+        `);
 });
 
 app.get('/help', (req, resp) => {
-    resp.send('Hello this is a help page');
+    resp.send(`<h1>Hello this is a help page</h1>
+        {
+        name:"Bhavna",
+        age : "27",
+        designation : "Deveoper"
+        }<br>
+        <a href="/about">Go to home page</a>
+        `);
 });
 app.listen(5600);
