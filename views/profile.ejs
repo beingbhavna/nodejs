@@ -3,8 +3,14 @@
     <title>Profile Page</title>
 </head>
 <body>
+    <%-include('common/header.ejs'); %>
     <h1 class="">Welcome<%= user.name%></h1>
     <h4 class="">Email<%= user.email%></h4>
     <h4 class="">Phone<%= user.phone%></h4>
+    <ul class="">
+        <% user.skills.forEach((item)=>{%>
+            <li class=""><%= item %></li>
+            <% }) %>
+    </ul>
 </body>
 </html>

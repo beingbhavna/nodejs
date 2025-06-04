@@ -13,9 +13,13 @@ app.get('/profile', (req, resp) => {
     const user = {
         name: 'Bhavna',
         email: 'test@gmail.com',
-        number:'7895030785'
+        number: '7895030785',
+        skills: ['Angular', 'Javascript', 'Typescript', 'HTML5', 'css', 'Node']
     }
-    resp.render('profile',{user})
+    resp.render('profile', { user })
+});
+app.get('/login', (req, resp) => {
+    resp.render('login')
 });
 app.get('/about', (req, resp) => {
     resp.sendFile(`${publicPath}/about.html`)
