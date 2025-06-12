@@ -22,6 +22,8 @@ const main = async () => {
             category: 'mobile'
         }
     ]);
-    console.log(data.acknowledged)
+    if (data.acknowledged) {
+        console.log('Data inserted succesfull');
+    }
 }
 main();
